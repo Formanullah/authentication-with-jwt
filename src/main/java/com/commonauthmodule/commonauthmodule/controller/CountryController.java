@@ -47,7 +47,7 @@ public class CountryController {
     private JwtUtil jwtTokenUtil;
 
     @GetMapping("/country")
-    public ResponseEntity<?> register(@RequestBody CountryDTO country, HttpServletRequest request) {
+    public ResponseEntity<?> getCountryDetail(@RequestBody CountryDTO country, HttpServletRequest request) {
         Country countryDetail = countryService.getCountry(country.getName());
 
         String bearerToken = request.getHeader("Authorization");
