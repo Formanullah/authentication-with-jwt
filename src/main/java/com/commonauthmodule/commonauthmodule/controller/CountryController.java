@@ -48,7 +48,7 @@ public class CountryController {
 
     @GetMapping("/country")
     public ResponseEntity<?> getCountryDetail(@RequestBody CountryDTO country, HttpServletRequest request) {
-        Country countryDetail = countryService.getCountry(country.getName());
+        Country countryDetail = countryService.getCountryDetail(country.getName());
 
         String bearerToken = request.getHeader("Authorization");
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
