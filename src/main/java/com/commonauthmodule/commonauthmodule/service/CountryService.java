@@ -18,7 +18,7 @@ public class CountryService {
 
     private final WebClient.Builder webClient;
 
-    public Country getCountry(String name) {
+    public Country getCountryDetail(String name) {
 
         String uri = "https://restcountries.com/v2/name/"+name+"?fields=name,population,currencies";
 
